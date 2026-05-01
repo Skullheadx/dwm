@@ -19,10 +19,13 @@
         src = ./.;
 
         nativeBuildInputs = [ pkgs.pkg-config ];
-        buildInputs = [
-          pkgs.libX11
-          pkgs.libxinerama
-          pkgs.libxft
+        buildInputs = with pkgs; [
+          libX11
+          libxinerama
+          libxft
+          libxcb
+          libxres
+
         ];
 
         makeFlags = [
